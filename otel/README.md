@@ -1,0 +1,1 @@
+下载地址: https://github.com/open-telemetry/opentelemetry-collector

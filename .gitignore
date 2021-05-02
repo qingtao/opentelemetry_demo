@@ -1,0 +1,5 @@
+downloads
+prometheus-2.26.0.windows-amd64/*
+!prometheus-2.26.0.windows-amd64/prometheus.yml
+windows_exporter/*
+otel/otelcol_windows_amd64.exe
