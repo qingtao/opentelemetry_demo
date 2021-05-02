@@ -1,13 +1,27 @@
 # OpenteLemetry和Prometheus的remote-write-receiver的实验
 
+- [OpenteLemetry和Prometheus的remote-write-receiver的实验](#opentelemetry和prometheus的remote-write-receiver的实验)
+  - [1. 实验环境](#1-实验环境)
+  - [2. 实验过程](#2-实验过程)
+    - [2.1. 启动`prometheus`](#21-启动prometheus)
+    - [2.2. 启动`windows_exporter`](#22-启动windows_exporter)
+    - [2.3. 启动`otelcol`](#23-启动otelcol)
+    - [2.3. 启动指标生成命令](#23-启动指标生成命令)
+  - [3. 可视化面板](#3-可视化面板)
+    - [3.1. Prometheus的抓取目标](#31-prometheus的抓取目标)
+    - [3.2. 采集器面板](#32-采集器面板)
+    - [3.3. otel主动写入的指标](#33-otel主动写入的指标)
+  - [4. 实验结果](#4-实验结果)
+
 ## 1. 实验环境
 
 | 序号 | 名称             | 说明                  |
 | ---- | ---------------- | --------------------- |
-| 1    | 操作系统         | windows 10            |
-| 2    | prometheus       | 版本v2.26.0           |
+| 1    | system           | windows 10            |
+| 2    | prometheus       | 版本号: v2.26.0       |
 | 3    | otel_collector   | OpenteLemetry的收集器 |
 | 4    | windows_exporter | windows系统的采集器   |
+| 5    | demo             | go命令行demo          |
 
 ## 2. 实验过程
 
@@ -120,7 +134,7 @@ cd /d/tools/otel/demo
 go run main
 ```
 
-## 3. 实验结果
+## 3. 可视化面板
 
 ### 3.1. Prometheus的抓取目标
 
@@ -139,3 +153,5 @@ go run main
 
 Prometheus的新版本支持了内置的远程写入，数据格式和以前的`remote_write`写入远程存储一样;
 Opentelemetry的collector支持Prometheus的远程写，因此我们可以利用otel主动推送指标，同时利用Prometheus的可视化等功能。
+
+![](images/otelcol_remote.png)
