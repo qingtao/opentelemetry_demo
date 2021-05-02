@@ -1,6 +1,6 @@
-# OpenteLemetry和Prometheus的remote-write-receiver的实验
+# Opentelemetry和Prometheus的remote-write-receiver的实验
 
-- [OpenteLemetry和Prometheus的remote-write-receiver的实验](#opentelemetry和prometheus的remote-write-receiver的实验)
+- [Opentelemetry和Prometheus的remote-write-receiver的实验](#opentelemetry和prometheus的remote-write-receiver的实验)
   - [1. 实验环境](#1-实验环境)
   - [2. 实验过程](#2-实验过程)
     - [2.1. 启动`prometheus`](#21-启动prometheus)
@@ -19,7 +19,7 @@
 | ---- | ---------------- | --------------------- |
 | 1    | system           | windows 10            |
 | 2    | prometheus       | 版本号: v2.26.0       |
-| 3    | otel_collector   | OpenteLemetry的收集器 |
+| 3    | otel_collector   | Opentelemetry的收集器 |
 | 4    | windows_exporter | windows系统的采集器   |
 | 5    | demo             | go命令行demo          |
 
